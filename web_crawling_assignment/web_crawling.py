@@ -65,18 +65,18 @@ def links(url):
 
 
 
+def main():
+    url = input("Enter your Url with https :")
+    inp = input("What you want to see in your website, For Title Enter : 1, Body : 2, Links: 3 :")
+
+    if int(inp) == 1:
+        title(url)
+
+    elif int(inp) == 2:
+        body(url)
+        
+    else:
+        links(url)
 
 
-url = input("Enter your Url with https :")
-
-inp = input("What you want to see in your website, Title : 1, Body : 2, Links: 3 :")
-
-if int(inp) == 1:
-    title(url)
-
-elif int(inp) == 2:
-    body(url)
-    
-else:
-    links(url)
-
+main()
