@@ -1,82 +1,69 @@
 import requests
 
-#This function will print title of any webpage.
-
 def title(url):
     response = requests.get(url)
     raw_content = response.text
-    
     title_start = raw_content.find("<title>") + len("<title>")
     title_end = raw_content.find("</title>")
     title = raw_content[title_start:title_end]
     print(title)
 
 
-
-
 def body(url):
     response = requests.get(url)
-    raw_content = response.text
-    
-    body_start = raw_content.find("<body>") + len("<body>")
-    body_end = raw_content.find("</body>")
-    body_raw_content = raw_content[body_start:body_end]
+    html_content = response.text
 
-    body_list = []
-    while len(body_raw_content) > 1:
-        s = body_raw_content.find("<p")
-        x = body_raw_content[s:].find(">")
-        e = body_raw_content[s+x:].find("</p")
-        content = body_raw_content[s+x: e]
+    texts = []
+    start_index = html_content.find("<body")
 
-        trimmed_content = content.strip("'>\r\n ")
+    if start_index != -1:
+        start_index = html_content.find(">", start_index) + 1
 
-        if content != '':
-            body_list.append(trimmed_content)
+        while start_index != -1:
+            end_index = html_content.find("<", start_index)
+ 
+            if end_index != -1:
+                text = html_content[start_index:end_index].strip()
+                if text:
+                    texts.append(text)
+                start_index = html_content.find(">", end_index) + 1
+            else:
+                break
 
-        body_raw_content = body_raw_content[e:]
-
-    for i in body_list:
-        print(i)
-
+    for t in texts:
+        print(t)
 
 
 
 def links(url):
     response = requests.get(url)
     raw_content = response.text
-    
-    body_start = raw_content.find("<body>") + len("<body>")
-    body_end = raw_content.find("</body>")
-    body_raw_content = raw_content[body_start:body_end]
+
+    body_raw_content = raw_content
 
     link = []
     while len(body_raw_content) > 1:
         s = body_raw_content.find("http")
         e = body_raw_content[s:].find('"')
         link.append(body_raw_content[s :s + e])
-
         body_raw_content = body_raw_content[s + e+1:]
 
     for j in link:
         print(j)
 
 
-
-
-
 def main():
     url = input("Enter your Url with https :")
-    inp = input("What you want to see in your website, For Title Enter : 1, Body : 2, Links: 3 :")
-
-    if int(inp) == 1:
-        title(url)
-
-    elif int(inp) == 2:
-        body(url)
-        
-    else:
-        links(url)
-
+    print("Tittle :")
+    title(url)
+    print("Texts :")
+    body(url)
+    print("Links :")
+    links(url)
 
 main()
+
+
+
+
+

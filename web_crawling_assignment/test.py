@@ -1,49 +1,27 @@
 import requests
-response = requests.get("https://sitare.org/")
-raw_content = response.text
-# print(raw_content)
+response = requests.get("https://zorp.one")
+html_content = response.text
+print(html_content)
 
-title_start = raw_content.find("<title>") + len("<title>")
-title_end = raw_content.find("</title>")
-title = raw_content[title_start:title_end]
-print(title)
+texts = []
+start_index = html_content.find("<body")
+print(start_index)
 
-body_start = raw_content.find("<body>") + len("<body>")
-body_end = raw_content.find("</body>")
-body_raw_content = raw_content[body_start:body_end]
-# print(body_raw_content)
-# print(type(body_raw_content))
-# print(len(body_raw_content))
+if start_index != -1:
+        start_index = html_content.find(">", start_index) + 1
 
+        while start_index != -1:
+            end_index = html_content.find("<", start_index)
+ 
+            if end_index != -1:
+                text = html_content[start_index:end_index].strip()
+                if text:
+                    texts.append(text)
+                start_index = html_content.find(">", end_index) + 1
+            else:
+                break
 
-body = []
-while len(body_raw_content) > 1:
-    s = body_raw_content.find("<p")
-    x = body_raw_content[s:].find(">")
-    e = body_raw_content[s+x:].find("</p")
-    content = body_raw_content[s+x: e]
+for t in texts:
+    print(t)
 
-    trimmed_content = content.strip("'>\r\n ")
-
-    if content != '':
-        body.append(trimmed_content)
-
-    body_raw_content = body_raw_content[e:]
-
-for i in body:
-    print(i)
-
-
-
-
-link = []
-while len(body_raw_content) > 1:
-    s = body_raw_content.find("http")
-    e = body_raw_content[s:].find('"')
-    link.append(body_raw_content[s :s + e])
-
-    body_raw_content = body_raw_content[s + e+1:]
-
-for j in link:
-    print(j)
 
