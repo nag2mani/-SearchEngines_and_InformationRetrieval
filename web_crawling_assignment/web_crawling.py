@@ -51,17 +51,20 @@ def links(url):
         link.append(body_raw_content[s :s + e])
         body_raw_content = body_raw_content[s + e+1:]
 
-    for j in link:
-        if j[0:6] not in ['https%']:
+    for j in link[:len(link)-7]:
+        if (j[0:6] not in ['https%', 'https&']) and (j[0:5] not in ['http%']):
             print(j)
 
 
 def main():
     url = input("Enter your Url with https :")
+    print('-----------------------------------------------------------------------------')
     print("Tittle :")
     title(url)
+    print('-----------------------------------------------------------------------------')
     print("Texts :")
     body(url)
+    print('-----------------------------------------------------------------------------')
     print("Links :")
     links(url)
 
