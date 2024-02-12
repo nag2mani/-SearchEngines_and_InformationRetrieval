@@ -29,10 +29,13 @@ def body(url):
                 start_index = html_content.find(">", end_index) + 1
             else:
                 break
-
-    for t in texts:
-        print(t)
-
+    
+    result = ''
+    for i in texts:
+        if (i[0] not in ['.', ',','', ' ', '(', ')', '[', ']', '{', '}', '@', "'", '&', '#', '^']):
+            if i[0:3] not in ['-->', 'htt']:
+                result = result + i + ' '
+    print(result)
 
 
 def links(url):
@@ -49,7 +52,8 @@ def links(url):
         body_raw_content = body_raw_content[s + e+1:]
 
     for j in link:
-        print(j)
+        if j[0:6] not in ['https%']:
+            print(j)
 
 
 def main():

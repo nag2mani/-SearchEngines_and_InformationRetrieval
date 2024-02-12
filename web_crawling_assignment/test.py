@@ -1,27 +1,13 @@
 import requests
-response = requests.get("https://zorp.one")
-html_content = response.text
-print(html_content)
+from bs4 import BeautifulSoup
 
-texts = []
-start_index = html_content.find("<body")
-print(start_index)
+# Specify the URL of the webpage you want to scrape
+url = 'https://en.wikipedia.org/wiki/Apple'
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
+paragraphs = soup.find_all()
 
-if start_index != -1:
-        start_index = html_content.find(">", start_index) + 1
+for paragraph in paragraphs:
+    print(paragraph.text)
 
-        while start_index != -1:
-            end_index = html_content.find("<", start_index)
- 
-            if end_index != -1:
-                text = html_content[start_index:end_index].strip()
-                if text:
-                    texts.append(text)
-                start_index = html_content.find(">", end_index) + 1
-            else:
-                break
-
-for t in texts:
-    print(t)
-
-
+# print(paragraphs)
