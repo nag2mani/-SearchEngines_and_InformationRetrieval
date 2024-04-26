@@ -4,14 +4,18 @@ This repo will contain all the code and work related to Search Engines and Infor
 
 ## Contents:
 
-### Desktop Files Listing
-### Finding N grams
-### Building Search Engines
-### Web Crawling
-### Web Similarity Simhash
+1. Desktop Files Listing
+
+2. Finding N grams
+
+3. Building Search Engines
+
+4. Web Crawling
+
+5. Web Similarity Simhash
 
 
 
 ## Author:
 
-### Nagmani Kumar
+Nagmani Kumar
