@@ -18,7 +18,7 @@ def list_files_in_drive(drive_path):
         return []
 
 # Specify the drive path (e.g., 'C:' for the C drive)
-drive_path = '/home/nag2mani/sitare/sem4/seir/SearchEngines_and_InformationRetrieval'
+drive_path = '/home/nag2mani/code/Github'
 
 # List all files in the specified drive
 files_in_drive = list_files_in_drive(drive_path)

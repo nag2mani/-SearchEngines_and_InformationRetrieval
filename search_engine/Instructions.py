@@ -13,8 +13,7 @@
 # Compute token idfs.
 # Build a tf x idf cosine normalized document vector.
 # Compute pairwise document similarity.
-# Sort document pairs from most similar to least similar, output <DOCNO> entry pairs and their similarity 
-
+# Sort document pairs from most similar to least similar and find top 50 docs, output <DOCNO> entry pairs and their similarity 
 
 
 
