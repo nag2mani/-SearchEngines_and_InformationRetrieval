@@ -1,0 +1,1 @@
+The northbridge is one of two basic computer chip chips on the motherboard of a computer The other basic chip is the Southbridge southbridge and together they create the computer chipset Usually north and southbridge are on different IC s it is rare for both of them to be on one chip 

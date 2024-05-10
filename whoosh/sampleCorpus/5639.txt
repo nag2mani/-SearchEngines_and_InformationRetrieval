@@ -1,0 +1,1 @@
+ Simon Peyton Jones Functional programming language functional programming language s such as Haskell He works at Microsoft Research in Cambridge England He is married to Dorothy a priest in the Church of England They have three children Simon Peyton Jones Simon Marlow and others have developed the Glasgow Haskell Compiler a compiler for Haskell He has also worked on C 

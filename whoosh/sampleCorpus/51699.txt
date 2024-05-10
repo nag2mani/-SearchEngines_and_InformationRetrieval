@@ -1,0 +1,1 @@
+ Template Location map Belarus is a location map definition used to overlay markers and labels on an equirectangular projection map of Belarus The markers are placed by latitude and longitude coordinates on the default map or a similar map image 

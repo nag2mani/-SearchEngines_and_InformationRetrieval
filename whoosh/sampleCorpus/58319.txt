@@ -1,0 +1,1 @@
+A tap changer is a component of a transformer It controls the transformer s output voltage by adjusting its winding ratio within some range of step levels The tap changer can be done manually or automatically and either when the transformer is energized science stub 

@@ -1,0 +1,1 @@
+ align right width pxTitle Header for Wikipedia Route diagram template Parameters Title text Route diagram by default Background color black by default Font color white by default

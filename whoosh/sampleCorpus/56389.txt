@@ -1,0 +1,1 @@
+The Lorentz transformations is a set of equations that describe a linear transformation between a stationary reference frame and a reference frame in constant velocity The equations are given by 

@@ -1,0 +1,1 @@
+The Open Systems Interconnection model is a method of thinking of computer networking in terms of abstraction layers Different communication technologies with similar functions are grouped into different logical layers on the OSI Model Each layer of the OSI Model makes use of functions provided by the layers below it and provides functions that are used by the layers above it 

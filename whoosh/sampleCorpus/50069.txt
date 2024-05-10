@@ -1,0 +1,1 @@
+The Template Commons links to a page on Wikimedia Commons If that page name is misspelled or missing the link will still appear blue even though the link will fail so please be careful 

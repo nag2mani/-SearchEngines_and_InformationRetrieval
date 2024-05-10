@@ -1,0 +1,1 @@
+A manifold is a concept from mathematics Making a manifold is like making a flat map of a sphere The Earth is a sphere a three dimensional object of geometry Yet map s or there would be some places where the paper was torn Each manifold has a dimension This is the dimension of the maps in the example above It is the same for all maps 
