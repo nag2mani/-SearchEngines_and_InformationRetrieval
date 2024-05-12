@@ -76,7 +76,7 @@ print("Document Frequency :", unique_word_df_dict)
 
 
 
-# Calculating idef of each term.
+# Calculating idf of each term.
 import math
 N=132
 token_idf_dict={}
@@ -107,6 +107,7 @@ for i in doc_wise_tf:
     for j in doc_wise_tf[i]:
         k = round(doc_wise_tf[i][j] * token_idf_dict[j], 2)
         sum = sum + k * k
+
     norm = math.sqrt(sum)
 
     for j in doc_wise_tf[i]:
@@ -167,7 +168,7 @@ for i in sorted_data[:50]:
 # Printing Similarity score in Decreasing order for top 50 documents;
 print("[First Documents, Second Documents, Similarity Score]")
 for inner_list in Top50_similar_documents:
-    print(inner_list)
+    print("Similarity between documents", inner_list)
     print()
 
 # Note: To take output in output.txt run the following command.
