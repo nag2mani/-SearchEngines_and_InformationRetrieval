@@ -14,7 +14,7 @@ i=1
 for file_name in files:
     documents_directory[file_name] = i
     i=i+1
-# print("Documents_dictionary :", documents_directory)
+print("Documents_dictionary :", documents_directory)
 
 
 
@@ -48,7 +48,7 @@ for file_name in documents_directory.keys():
 
         doc_content = cleaned_title_words + cleaned_text_words
         docId_to_wordList_dict[documents_directory[file_name]] = doc_content
-# print(docId_to_wordList_dict)
+print(docId_to_wordList_dict)
 
 
 
@@ -60,7 +60,7 @@ for key_id in docId_to_wordList_dict:
         if i not in unique_word_dict:
             unique_word_dict[i] = j
             j=j+1
-# print(unique_word_dict)
+print(unique_word_dict)
 
 
 
@@ -72,7 +72,7 @@ for i in unique_word_dict:
         if i in docId_to_wordList_dict[k]:
             cnt = cnt + 1
     unique_word_df_dict[i] = cnt
-# print("Document Frequency :", unique_word_df_dict)
+print("Document Frequency :", unique_word_df_dict)
 
 
 
@@ -82,7 +82,7 @@ N=132
 token_idf_dict={}
 for one in unique_word_df_dict:
     token_idf_dict[one] = round(math.log2(N/unique_word_df_dict[one]), 2)
-# print("Inverse Document Frequency :", token_idf_dict)
+print("Inverse Document Frequency :", token_idf_dict)
 
 
 
@@ -94,7 +94,7 @@ for i in docId_to_wordList_dict:
     doc_dict = Counter(docId_to_wordList_dict[i])
     doc_wise_tf[j] = dict(doc_dict)
     j=j+1
-# print("Document Term Frequency :", doc_wise_tf)
+print("Document Term Frequency :", doc_wise_tf)
 
 
 
@@ -115,7 +115,7 @@ for i in doc_wise_tf:
     
     doc_wise_vectors[m] = temp_dict
     m=m+1
-# print("doc_wise_Normalised_vectors :", doc_wise_vectors)
+print("doc_wise_Normalised_vectors :", doc_wise_vectors)
 
 
 
@@ -169,3 +169,7 @@ print("[First Documents, Second Documents, Similarity Score]")
 for inner_list in Top50_similar_documents:
     print(inner_list)
     print()
+
+# Note: To take output in output.txt run the following command.
+# python3 main.py > output.txt     // for linux
+# python your_script.py >> output.txt  // for window
