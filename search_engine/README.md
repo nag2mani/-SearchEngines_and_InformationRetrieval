@@ -1,6 +1,6 @@
-# Repository: TF-IDF Document Similarity
+# Repository: Search Engine Built from Scratch
 
-This repository is designed for testing purposes, focusing on building **TF-IDF weighted vectors** for documents and computing **pairwise cosine similarity**. Below, you will find an overview of the tasks completed and instructions for working with this code.
+This repository demonstrates the development of a **search engine from scratch** by implementing essential features such as **Scraping**, **Indexing**, and **Ranking** of documents. The ranking is achieved by calculating **TF-IDF weighted vectors** and measuring **pairwise cosine similarity**. Below, you will find an overview of the tasks completed and instructions for working with this code.
 
 ## Features Implemented
 
