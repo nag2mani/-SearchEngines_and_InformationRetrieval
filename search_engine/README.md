@@ -63,25 +63,14 @@ This repository demonstrates the development of a **search engine from scratch**
 
 1. Clone this repository:
    ```bash
-   git clone <repository-url>
-   cd <repository-name>
+   git clone https://github.com/nag2mani/SearchEngines_and_InformationRetrieval.git
+   cd SearchEngines_and_InformationRetrieval/search_engine
    ```
 2. Install necessary dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+
 3. Execute the main script:
    ```bash
    python main.py
    ```
 
-## Future Improvements
-
-- Optimize tokenization for speed.
-- Add support for stemming and stopword removal.
-- Implement a graphical representation of similarity results.
-- Enhance scalability for large datasets.
-
----
-
-Contributions and feedback are welcome. Please feel free to raise issues or submit pull requests.
+Author : Nagmani Kumar
