@@ -1,4 +1,4 @@
-# Repository: Search Engine Built from Scratch
+# Search Engine Built from Scratch
 
 This repository demonstrates the development of a **search engine from scratch** by implementing essential features such as **Scraping**, **Indexing**, and **Ranking** of documents. The ranking is achieved by calculating **TF-IDF weighted vectors** and measuring **pairwise cosine similarity**. Below, you will find an overview of the tasks completed and instructions for working with this code.
 
